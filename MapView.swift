@@ -16,15 +16,15 @@ struct EcoLocation: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 41.8781, longitude: -87.6298), // Chicago
-        span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
+        span: MKCoordinateSpan(latitudeDelta: 0.99, longitudeDelta: 0.99)
     )
     
     @State private var ecoLocations: [EcoLocation] = []
     @State private var search = ""
     
     let ecoKeywords = [
-        "thrift", "recycle", "Drop-Off", "refill", "zero waste", "sustainable",
-        "farmers market", "compost", "organic", "reuse", "bike repair", "co-op", "savers", "goodwill"
+        "thrift", "recycling", "refill", "zero waste", "sustainable",
+        "farmers market", "compost", "organic", "reuse", "Bike repair", "Co-op", "Savers", "goodwill", "Yard Waste Removal", "Eco", "Landscapers", "Greenhouse", "Farm", "Charge", "Solar Panel", "Energy"
     ]
 
     
@@ -88,7 +88,7 @@ struct MapView: View {
                     )
                 } else {
                     return nil
-                }
+                } 
             }
         }
     } //ChatGPT helped me build this code. It helped with how to search up keywords and how to search for these locations.
